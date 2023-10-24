@@ -18,8 +18,8 @@ You may also see any lint errors in the console.
 
 Project description:
 For now, the project has two features,
-list page: `/list`
-detail page: `/detail/${assetContractAddress}/${tokenId}`
+1. list page: `/list`
+2. detail page: `/detail/${assetContractAddress}/${tokenId}`
 
 There are some notes to start the project:
 0. You can import wallet address from chrome metamask extension.
