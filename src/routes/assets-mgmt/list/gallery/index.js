@@ -5,7 +5,7 @@ import styles from './styles.module.scss'
 
 const Gallery = ({ dataList }) => {
   const arrangedDataList = []
-  for (let i = 0; i < dataList.length; i++) {
+  for (let i = 0; i < dataList?.length; i++) {
     if (i % 2 === 0) {
       arrangedDataList.push([dataList[i], dataList[i + 1]])
     }

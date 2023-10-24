@@ -18,12 +18,11 @@ const useFetch = ({ fetchAPI, initialAPIParams = {} }) => {
         return {
           ...prev,
           data: prev.data.concat(response),
-          hasMore: response.length !== 0,
+          hasMore: response?.length !== 0,
         }
       })
-      setApiParams({
-        ...apiParams,
-        offset: apiParams.offset + 1,
+      setApiParams((prev) => {
+        return { ...prev, offset: prev.offset + 1 }
       })
     })
   }, [apiParams, fetchAPI])

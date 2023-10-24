@@ -22,6 +22,7 @@ list page: `/list`
 detail page: `/detail/${assetContractAddress}/${tokenId}`
 
 There are some notes to start the project:
+0. You can import wallet address from chrome metamask extension.
 1. The entry point of the app is `src/index.js`
 2. The routing path config is `src/routes-configs.js`
 3. Please place the global utilites and variable in `src/utils/**`

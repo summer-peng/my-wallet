@@ -4,7 +4,7 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 const MyInfiniteScroll = ({ fetchData, data, hasMore, children }) => {
   return (
     <InfiniteScroll
-      dataLength={data.length} //This is important field to render the next data
+      dataLength={data?.length} //This is important field to render the next data
       next={fetchData}
       hasMore={hasMore}
       loader={<h4>Loading...</h4>}

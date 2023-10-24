@@ -3,17 +3,13 @@ import InfiniteScroll from 'common-components/infinite-scroll'
 import useFetch from './useFetch'
 import Gallery from './gallery'
 import { getList } from './api'
-
-// add token from here if it needed.
-//import { TOKEN } from 'utils/const'
-const params = {
-  //owner :TOKEN
-}
+import { useOutletContext } from 'react-router-dom'
 
 const List = () => {
+  const { token } = useOutletContext()
   const { fetchData, pageData } = useFetch({
     fetchAPI: getList,
-    initialAPIParams: params,
+    initialAPIParams: token ? { owner: token } : {},
   })
 
   useEffect(() => {
